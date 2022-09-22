@@ -24,11 +24,11 @@ html {
     font-size: 16px;
     line-height: 1.5;
     font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -44,14 +44,14 @@ html {
 * Customize the background color to match your design.
 */
 
-::-moz-selection {
+/* ::-moz-selection {
     background: HotPink;
     color: white;
     text-shadow: none;
-}
+} */
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -156,18 +156,18 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #3385FF;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #134da4;
 }
 
 /*------------------------------------*\
