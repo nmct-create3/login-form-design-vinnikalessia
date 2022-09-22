@@ -19,7 +19,12 @@
 #Variables
 \*------------------------------------*/
 
-:root {}
+:root {
+    accent-color: blue;
+    --global-color-alpha-light: #4F95FF;
+    --global-color-alpha: #3385FF;
+    --global-color-alpha-dark: #2E77E6;
+}
 
 /* CSS variables here */
 
@@ -176,11 +181,13 @@ a {
 a:visited,
 a:active {
     color: #3385FF;
+    color: var(--global-color-alpha);
 }
 
 a:hover,
 a:focus {
     color: #134da4;
+    color: var(--global-color-alpha-light);
 }
 
 label,
@@ -206,6 +213,10 @@ input{
 
 .o-row--login {
     /* stuff here to align the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 /* size modifiers */
@@ -479,6 +490,28 @@ input{
     Card with box shadow
 */
 
+.c-card{
+    background-color: white;
+    border-radius: 3px;
+    /* box-shadow: 0 2px 4px white; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+.c-card__header{
+    padding: 48px 48px 0;
+}
+
+.c-card__body{
+    padding: 0px 48px 0px;
+}
+
+.c-card__footer{
+    display: flow-root;
+    border-top: 1px solid #E2E3E7;
+    padding: 24px 24px 0;
+}
+
+
 /*
     Component: Forms
     ---
@@ -497,9 +530,28 @@ input{
     Class to put on all input="text" like form inputs
 */
 
-.c-input {}
+.c-input {
+    font-family: "Inter Web", sans-serif;
+    color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E2E3E7;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 11px 16px; /*11 want 1 pixel van border*/
+    outline: none;
+}
 
-.c-input:focus {}
+.c-input:focus {
+    border-color: #3385FF;
+    /* box-shadow: 0 0 0 3px #3385ff4d; */
+    box-shadow: 0 0 0 3px rgb(51, 133, 255, .3);
+}
 
 /*
     Component: Label
@@ -507,7 +559,17 @@ input{
     Class to put on all form labels
 */
 
-.c-label {}
+.c-label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    color: #606274;
+    padding: 24px 0px 0px 0px;
+}
+
+.c-label--option{
+    margin-left: 8px;
+}
 
 /* If a input is focused within the form-field class change te color of the label */
 
@@ -519,15 +581,43 @@ input{
     Class to put on form buttons or links
 */
 
-.c-button {}
+.c-button {
+    line-height: 24px;
+    width: 100%;
+    background-color: #3385FF;
+    border: 1px solid #3385FF;
+    /* border: none; */
+    color: white;
+    padding: 11px 16px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 16px;
+    outline: none;
+    transition: all .1s ease;
+}
 
-.c-button:hover {}
+.c-button:hover {
+    background-color: #4F95FF;
+}
 
-.c-button:focus {}
+.c-button:focus {
+    box-shadow: 0 0 0 3px rgba(51, 133, 255, .3);
+    /* background-color: #00327d; */
+    border-color: #3385FF;
+}
 
-.c-button:active {}
+.c-button:active {
+    /* background-color: orange; */
+    background-color: #2E77E6;
+    /* color: hotpink; */
+    box-shadow: none;
+}
 
-.c-button--block {}
+.c-help{
+    padding: 24px 0;
+    text-align: center;
+}
+
 
 /*------------------------------------*\
 #UTILITIES
