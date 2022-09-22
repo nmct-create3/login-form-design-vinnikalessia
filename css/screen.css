@@ -183,6 +183,12 @@ a:focus {
     color: #134da4;
 }
 
+label,
+input{
+    /* zorgt ervoor dat input veld onder tekst komt */
+    display: block;
+}
+
 /*------------------------------------*\
 #OBJECTS
 \*------------------------------------*/
@@ -478,6 +484,12 @@ a:focus {
     ---
     Everything form related here
 */
+.c-form-field--option{
+    /*zorgt ervoor dat checkbox en tekst naast elkaar staan.*/
+    display: flex;
+    /*zorgt voor ruimte tussen checkbox en tekst*/
+    gap: 8px;
+}
 
 /*
     Component: Input
