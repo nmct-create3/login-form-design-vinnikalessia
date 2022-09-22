@@ -444,6 +444,28 @@ a:focus {
     ---
     Website main logo
 */
+.c-logo{
+    height: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.c-logo__symbol{
+    height: 100%;
+}
+
+.c-logo__path--1{
+    fill: #20223A;
+}
+
+.c-logo__path--2{
+    fill: #3385FF;
+}
+
+.c-logo__path--3{
+    fill: #1B4186;
+}
+
 
 /*
     Component: Card
